@@ -8,6 +8,8 @@ git log - View recent commits
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
 git commit --amend --reset-author
+git remote - view the remotes destinations
+git remote -v
 
 :-)
 supreme-enigma
