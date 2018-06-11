@@ -21,6 +21,9 @@ instead of 1) git add and 2) git commit
 
 heroku open (open url directly in the browser)
 heroku logs (if problems)
+heroku config (prints all env vars)
+heroku config:set KEY=value (to set a KEY named env var)
+heroku config:unset KEY (to remove KEY named env var)
 
 yarn add xxx --dev (placing package in devDependencies list)
 yarn install (all)
