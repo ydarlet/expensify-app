@@ -1,5 +1,3 @@
-import { bindActionCreators } from "../../../../../../Library/Caches/typescript/2.9/node_modules/@types/redux-mock-store/node_modules/redux";
-
 // Expenses Reducer
 
 const expensesReducerDefaultState = [];
