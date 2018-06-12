@@ -46,6 +46,24 @@ export const removeExpense = ({ id } = {}) => ({
     id
 });
 
+// Expense Removal Challenge
+// 1. Create startRemoveExpense (same call signature as RemoveExpense)
+// 2. Test startRemoveExpense with "should remove expenses from firebase" (test if fetch is null)
+// 3. Use startRemoveExpense in EditExpensePage instead of removeExpense
+// 4. Adjust EditExpensePage tests
+// 5. Commit Push Deploy on Heroku and test Online
+
+// SART_REMOVE_EXPENSE
+export const startRemoveExpense = ({ id } = {}) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).remove().then((id) => {
+            dispatch(removeExpense({ id }));
+            dispatch(startSetExpenses());
+        });
+    };
+};
+
+
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
     type: 'EDIT_EXPENSE',
