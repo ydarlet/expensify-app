@@ -1,3 +1,5 @@
+import { bindActionCreators } from "../../../../../../Library/Caches/typescript/2.9/node_modules/@types/redux-mock-store/node_modules/redux";
+
 // Expenses Reducer
 
 const expensesReducerDefaultState = [];
@@ -22,6 +24,8 @@ export default (state = expensesReducerDefaultState, action) => {
                     return expense;
                 };
             });
+        case 'SET_EXPENSES':
+            return action.expenses;
         default:
             return state;
     }
