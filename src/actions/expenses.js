@@ -56,9 +56,9 @@ export const removeExpense = ({ id } = {}) => ({
 // SART_REMOVE_EXPENSE
 export const startRemoveExpense = ({ id } = {}) => {
     return (dispatch) => {
-        return database.ref(`expenses/${id}`).remove().then((id) => {
+        return database.ref(`expenses/${id}`).remove().then(() => {
             dispatch(removeExpense({ id }));
-            dispatch(startSetExpenses());
+            // dispatch(startSetExpenses());
         });
     };
 };
