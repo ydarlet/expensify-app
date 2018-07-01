@@ -1,4 +1,4 @@
-// import moment from 'moment'; // --> marche pas --> fonction qui s'apelle elle même :-)
+// import moment from 'moment'; // --> will not work --> fonction who call herself (name of the file) :-)
 const moment = require.requireActual('moment');
 
 export default (timestamp = 0) => {
