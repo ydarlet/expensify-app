@@ -16,11 +16,13 @@
 
 .button--facebook {
     background: $facebook-blue;
-    margin-bottom: $s-size;
+    width: 17vw;
 }
 
 .button--google {
     background: $google-red;
+    margin-bottom: $s-size;
+    width: 17vw;
 }
 
 .button--link {
