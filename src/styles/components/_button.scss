@@ -10,10 +10,27 @@
     text-decoration: none;
 }
 
+.button--confirm {
+    background: $confirm-red;
+}
+
+.button--facebook {
+    background: $facebook-blue;
+    margin-bottom: $s-size;
+}
+
+.button--google {
+    background: $google-red;
+}
+
 .button--link {
     background: none;
 }
 
 .button--secondary {
     background: #888;
+}
+
+.button--margin-right {
+    margin-right: $m-size;
 }

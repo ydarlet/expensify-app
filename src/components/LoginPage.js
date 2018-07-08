@@ -1,19 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startLogin } from '../actions/auth';
+import { startLoginGoogle, startLoginFacebook } from '../actions/auth';
 
-export const LoginPage = ({ startLogin }) => (
+export const LoginPage = ({ startLoginGoogle, startLoginFacebook }) => (
     <div className="box-layout">
         <div className="box-layout__box">
             <h1 className="box-layout__title">Expensify App</h1>
             <p>It's time to get your expenses under control.</p>
-            <button className="button" onClick={startLogin}>Login with Google</button>
+            <button className="button button--facebook" onClick={startLoginFacebook}>
+                <i className="fab fa-facebook-f font-awesome"></i>
+                Login with Facebook
+            </button>
+            <button className="button button--google" onClick={startLoginGoogle}>
+                <i className="fab fa-google font-awesome"></i>
+                Login with Google
+            </button>
         </div>
     </div>
 );
 
 const mapDispatchToProps = (dispatch) => ({
-    startLogin: () => dispatch(startLogin())
+    startLoginGoogle: () => dispatch(startLoginGoogle()),
+    startLoginFacebook: () => dispatch(startLoginFacebook())
 });
 
 export default connect(undefined, mapDispatchToProps)(LoginPage);

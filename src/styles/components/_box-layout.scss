@@ -8,12 +8,25 @@
     width: 100vw;
 }
 
+.box-layout--no-background {
+    background: none;
+}
+
 .box-layout__box {
     background: fade-out(white, .15);
     border-radius: 3px;
     padding: $l-size $m-size;
     text-align: center;
     width: 25rem;
+}
+
+.box-layout__box--delete-expense {
+    width: 30rem;
+}
+
+.box-layout__box--dark-blue {
+    background: $dark-blue;
+    color: white;
 }
 
 .box-layout__title {
